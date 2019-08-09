@@ -1,0 +1,14 @@
+<h1><%= @student.to_s %></h1>
+<div>
+
+ 
+<%= form_for :student, url:activate_student_path do |f|%> 
+    <%= f.label :active %><br>
+    <%= f.label :active, "True"%>
+    <%= f.radio_button :active, 'True', :value => true, :checked => (@student.active)%>
+    <%= f.label :active, "False"%>
+    <%= f.radio_button :active, 'False', :value => false, :checked => (!@student.active)%>
+    <%= f.submit %>
+<% end %> 
+
+</div>
